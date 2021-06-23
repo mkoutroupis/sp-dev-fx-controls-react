@@ -914,6 +914,18 @@
 
 
   <li class="md-nav__item">
+    <a href="MyTeams.html" title="MyTeams" class="md-nav__link">
+      MyTeams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="Pagination.html" title="Pagination" class="md-nav__link">
       Pagination
     </a>
@@ -1012,6 +1024,30 @@
   <li class="md-nav__item">
     <a href="TaxonomyPicker.html" title="TaxonomyPicker" class="md-nav__link">
       TaxonomyPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="TeamChannelPicker.html" title="TeamChannelPicker" class="md-nav__link">
+      TeamChannelPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="TeamPicker.html" title="TeamPicker" class="md-nav__link">
+      TeamPicker
     </a>
   </li>
 
@@ -1349,6 +1385,7 @@
             <span class="nx">label</span><span class="o">=</span><span class="s2">&quot;Select your list(s)&quot;</span>
             <span class="nx">placeHolder</span><span class="o">=</span><span class="s2">&quot;Select your list(s)&quot;</span>
             <span class="nx">baseTemplate</span><span class="o">=</span><span class="p">{</span><span class="mf">100</span><span class="p">}</span>
+            <span class="nx">contentTypeId</span><span class="o">=</span><span class="s2">&quot;0x0101&quot;</span>
             <span class="nx">includeHidden</span><span class="o">=</span><span class="p">{</span><span class="kc">false</span><span class="p">}</span>
             <span class="nx">multiSelect</span><span class="o">=</span><span class="p">{</span><span class="kc">false</span><span class="p">}</span>
             <span class="nx">onSelectionChanged</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">onListPickerChange</span><span class="p">}</span> <span class="o">/&gt;</span>
@@ -1376,7 +1413,7 @@
 <tbody>
 <tr>
 <td>context</td>
-<td>WebPartContext | ExtensionContext</td>
+<td>BaseComponentContext</td>
 <td>yes</td>
 <td>The context object of the SPFx loaded webpart or customizer.</td>
 </tr>
@@ -1420,7 +1457,7 @@
 <td>selectedList</td>
 <td>string OR string[]</td>
 <td>no</td>
-<td>Keys of the selected item(s). If you provide this, you must maintain selection state by observing onSelectionChanged events and passing a new value in when changed.</td>
+<td>Keys(list Ids) of the selected item(s). If you provide this, you must maintain selection state by observing onSelectionChanged events and passing a new value in when changed.</td>
 </tr>
 <tr>
 <td>multiSelect</td>
@@ -1457,6 +1494,18 @@
 <td>string</td>
 <td>no</td>
 <td>Absolute Web Url of target site (user requires permissions)</td>
+</tr>
+<tr>
+<td>contentTypeId</td>
+<td>string</td>
+<td>no</td>
+<td>The Id if a content type which must be present in a list in order for the list to appear in the picker.</td>
+</tr>
+<tr>
+<td>refreshToggle</td>
+<td>boolean</td>
+<td>no</td>
+<td>If present can be used to force the control to refresh the list of lists by toggling its value</td>
 </tr>
 </tbody>
 </table>

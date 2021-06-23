@@ -914,6 +914,18 @@
 
 
   <li class="md-nav__item">
+    <a href="MyTeams.html" title="MyTeams" class="md-nav__link">
+      MyTeams
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="Pagination.html" title="Pagination" class="md-nav__link">
       Pagination
     </a>
@@ -1012,6 +1024,30 @@
   <li class="md-nav__item">
     <a href="TaxonomyPicker.html" title="TaxonomyPicker" class="md-nav__link">
       TaxonomyPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="TeamChannelPicker.html" title="TeamChannelPicker" class="md-nav__link">
+      TeamChannelPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="TeamPicker.html" title="TeamPicker" class="md-nav__link">
+      TeamPicker
     </a>
   </li>
 
@@ -1350,6 +1386,24 @@
                      <span class="nx">disabled</span><span class="o">=</span><span class="p">{</span><span class="kc">false</span><span class="p">}</span> <span class="o">/&gt;</span>
 </code></pre></div>
 
+<ul>
+<li>If You want to use <code>ListItemAttachments</code> controls with new form You have to use React.createRef.</li>
+</ul>
+<p>Following example will add selected attachments to list item with id = 1</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nx">listItemAttachmentsComponentReference</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createRef</span><span class="o">&lt;</span><span class="nx">ListItemAttachments</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="p">...</span>
+      <span class="o">&lt;</span><span class="nx">ListItemAttachments</span> 
+        <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">listItemAttachmentsComponentReference</span><span class="p">}</span> 
+        <span class="nx">context</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">context</span><span class="p">}</span> 
+        <span class="nx">listId</span><span class="o">=</span><span class="s2">&quot;dfcfdb95-2488-4757-b55b-14d94166ad87&quot;</span> 
+        <span class="nx">itemId</span><span class="o">=</span><span class="p">{</span><span class="mf">0</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="p">...</span>
+<span class="o">&lt;</span><span class="nx">PrimaryButton</span> <span class="nx">text</span><span class="o">=</span><span class="s2">&quot;Save to Item with id 1&quot;</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span><span class="o">=&gt;</span><span class="p">{</span>
+        <span class="c1">//@ts-ignore</span>
+        <span class="nx">listItemAttachmentsComponentReference</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">uploadAttachments</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+      <span class="p">}}</span> <span class="o">/&gt;</span>
+</code></pre></div>
+
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
 <p>The <code>ListItemAttachments</code> control can be configured with the following properties:</p>
 <table>
@@ -1364,14 +1418,14 @@
 <tbody>
 <tr>
 <td>context</td>
-<td>WebPartContext | ExtensionContext</td>
+<td>BaseComponentContext</td>
 <td>yes</td>
 <td>SPFx web part or extention context</td>
 </tr>
 <tr>
 <td>itemId</td>
 <td>number</td>
-<td>yes</td>
+<td>no</td>
 <td>List Item Id</td>
 </tr>
 <tr>
