@@ -857,8 +857,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../LocationPicker/" title="LocationPicker" class="md-nav__link">
+      LocationPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Map/" title="Map" class="md-nav__link">
       Map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MyTeams/" title="MyTeams" class="md-nav__link">
+      MyTeams
     </a>
   </li>
 
@@ -1020,6 +1044,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TeamChannelPicker/" title="TeamChannelPicker" class="md-nav__link">
+      TeamChannelPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TeamPicker/" title="TeamPicker" class="md-nav__link">
+      TeamPicker
+    </a>
   </li>
 
         
@@ -1382,6 +1430,21 @@
 <span class="p">}</span>
 </code></pre></div>
 
+<ul>
+<li>With the <code>onNewTerm</code> property you can capture the event, when text is in the input field and
+enter/return is pressed. With a controlled TaxonomyPicker, this enables you to create the term 
+and have the same flow as in SharePoint Keywords fields.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>    <span class="kd">const</span> <span class="nx">onNewTerm</span> <span class="o">=</span> <span class="p">(</span><span class="nx">value</span>: <span class="kt">IPickerTerm</span><span class="p">)</span><span class="o">:</span> <span class="ow">void</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">value</span><span class="o">?</span><span class="p">.</span><span class="nx">name</span> <span class="o">&amp;&amp;</span> <span class="nx">EmptyGuid</span> <span class="o">===</span> <span class="nx">value</span><span class="p">.</span><span class="nx">key</span> <span class="p">){</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`TaxonmyPicker.onNewTerm name=</span><span class="si">${</span><span class="nx">value</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="nx">value</span> <span class="p">);</span>
+                <span class="c1">// Create keyword</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="sb">`TaxonmyPicker.onNewTerm name=</span><span class="si">${</span><span class="nx">value</span><span class="o">?</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span> <span class="nx">value</span> <span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">};</span>
+</code></pre></div>
+
 <h2 id="term-actions">Term actions<a class="headerlink" href="#term-actions" title="Permanent link">&para;</a></h2>
 <p>Since version <code>1.12.0</code>, you can apply term actions to all terms or specific ones. Term actions could for instance be used to retrieve the labels of the term, or retrieve other information. These term actions can be implemented as follows:</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="nx">TaxonomyPicker</span> <span class="nx">allowMultipleSelections</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span>
@@ -1501,7 +1564,7 @@
 </tr>
 <tr>
 <td>context</td>
-<td>WebPartContext | ExtensionContext</td>
+<td>BaseComponentContext</td>
 <td>yes</td>
 <td>Context of the current web part or extension.</td>
 </tr>
@@ -1528,6 +1591,12 @@
 <td>function</td>
 <td>no</td>
 <td>captures the event of when the terms in the picker has changed.</td>
+</tr>
+<tr>
+<td>onNewTerm</td>
+<td>function</td>
+<td>no</td>
+<td>captures the event when text is in the input field and the user presses return</td>
 </tr>
 <tr>
 <td>isTermSetSelectable</td>
@@ -1855,13 +1924,13 @@
           </a>
         
         
-          <a href="../Toolbar/" title="Toolbar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../TeamChannelPicker/" title="TeamChannelPicker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Toolbar
+                TeamChannelPicker
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -1887,7 +1956,7 @@
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://twitter.com/officedevpnp" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/m365pnp" class="md-footer-social__link fa fa-twitter"></a>
     
       <a href="http://aka.ms/sppnp-videos" class="md-footer-social__link fa fa-youtube"></a>
     

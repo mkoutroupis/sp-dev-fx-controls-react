@@ -902,8 +902,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../LocationPicker/" title="LocationPicker" class="md-nav__link">
+      LocationPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Map/" title="Map" class="md-nav__link">
       Map
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../MyTeams/" title="MyTeams" class="md-nav__link">
+      MyTeams
     </a>
   </li>
 
@@ -1012,6 +1036,30 @@
   <li class="md-nav__item">
     <a href="../TaxonomyPicker/" title="TaxonomyPicker" class="md-nav__link">
       TaxonomyPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TeamChannelPicker/" title="TeamChannelPicker" class="md-nav__link">
+      TeamChannelPicker
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../TeamPicker/" title="TeamPicker" class="md-nav__link">
+      TeamPicker
     </a>
   </li>
 
@@ -1350,6 +1398,24 @@
                      <span class="nx">disabled</span><span class="o">=</span><span class="p">{</span><span class="kc">false</span><span class="p">}</span> <span class="o">/&gt;</span>
 </code></pre></div>
 
+<ul>
+<li>If You want to use <code>ListItemAttachments</code> controls with new form You have to use React.createRef.</li>
+</ul>
+<p>Following example will add selected attachments to list item with id = 1</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">let</span> <span class="nx">listItemAttachmentsComponentReference</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createRef</span><span class="o">&lt;</span><span class="nx">ListItemAttachments</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="p">...</span>
+      <span class="o">&lt;</span><span class="nx">ListItemAttachments</span> 
+        <span class="nx">ref</span><span class="o">=</span><span class="p">{</span><span class="nx">listItemAttachmentsComponentReference</span><span class="p">}</span> 
+        <span class="nx">context</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">context</span><span class="p">}</span> 
+        <span class="nx">listId</span><span class="o">=</span><span class="s2">&quot;dfcfdb95-2488-4757-b55b-14d94166ad87&quot;</span> 
+        <span class="nx">itemId</span><span class="o">=</span><span class="p">{</span><span class="mf">0</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="p">...</span>
+<span class="o">&lt;</span><span class="nx">PrimaryButton</span> <span class="nx">text</span><span class="o">=</span><span class="s2">&quot;Save to Item with id 1&quot;</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()=&gt;{</span>
+        <span class="c1">//@ts-ignore</span>
+        <span class="nx">listItemAttachmentsComponentReference</span><span class="p">.</span><span class="nx">current</span><span class="p">.</span><span class="nx">uploadAttachments</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+      <span class="p">}}</span> <span class="o">/&gt;</span>
+</code></pre></div>
+
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
 <p>The <code>ListItemAttachments</code> control can be configured with the following properties:</p>
 <table>
@@ -1364,14 +1430,14 @@
 <tbody>
 <tr>
 <td>context</td>
-<td>WebPartContext | ExtensionContext</td>
+<td>BaseComponentContext</td>
 <td>yes</td>
 <td>SPFx web part or extention context</td>
 </tr>
 <tr>
 <td>itemId</td>
 <td>number</td>
-<td>yes</td>
+<td>no</td>
 <td>List Item Id</td>
 </tr>
 <tr>
@@ -1385,6 +1451,18 @@
 <td>string</td>
 <td>no</td>
 <td>URL of the site. By default it uses the current site URL.</td>
+</tr>
+<tr>
+<td>label</td>
+<td>string</td>
+<td>no</td>
+<td>Main text to display on the placeholder, next to the icon.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>no</td>
+<td>Description text to display on the placeholder, below the main text and icon.</td>
 </tr>
 <tr>
 <td>disabled</td>
@@ -1468,7 +1546,7 @@
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-      <a href="https://twitter.com/officedevpnp" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/m365pnp" class="md-footer-social__link fa fa-twitter"></a>
     
       <a href="http://aka.ms/sppnp-videos" class="md-footer-social__link fa fa-youtube"></a>
     
