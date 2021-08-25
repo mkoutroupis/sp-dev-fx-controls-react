@@ -36,7 +36,7 @@
     
     
       
-        <title>Overview - @pnp/spfx-controls-react</title>
+        <title>Beta testing - @pnp/spfx-controls-react</title>
       
     
     
@@ -101,7 +101,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#project-guides" tabindex="1" class="md-skip">
+      <a href="#testing-out-a-beta-release" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -127,7 +127,7 @@
                 @pnp/spfx-controls-react
               </span>
               <span class="md-header-nav__topic">
-                Overview
+                Beta testing
               </span>
             
           
@@ -199,16 +199,14 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." title="Home" class="md-tabs__link">
+      <a href=".." title="Home" class="md-tabs__link md-tabs__link--active">
         Home
       </a>
     
@@ -222,7 +220,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="Guides" class="md-tabs__link md-tabs__link--active">
+        <a href="../guides/" title="Guides" class="md-tabs__link">
           Guides
         </a>
       
@@ -330,11 +328,56 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../beta/" title="Beta testing" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Beta testing
+      </label>
+    
+    <a href="./" title="Beta testing" class="md-nav__link md-nav__link--active">
       Beta testing
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beta-control-documentation" title="Beta control documentation" class="md-nav__link">
+    Beta control documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -342,12 +385,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Guides
@@ -363,20 +404,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Overview" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../guides/" title="Overview" class="md-nav__link">
       Overview
     </a>
-    
   </li>
 
         
@@ -386,7 +418,7 @@
 
 
   <li class="md-nav__item">
-    <a href="contributing/" title="Contributing" class="md-nav__link">
+    <a href="../guides/contributing/" title="Contributing" class="md-nav__link">
       Contributing
     </a>
   </li>
@@ -398,7 +430,7 @@
 
 
   <li class="md-nav__item">
-    <a href="mpa/" title="Minimal Path to Awesome" class="md-nav__link">
+    <a href="../guides/mpa/" title="Minimal Path to Awesome" class="md-nav__link">
       Minimal Path to Awesome
     </a>
   </li>
@@ -410,7 +442,7 @@
 
 
   <li class="md-nav__item">
-    <a href="submitting-pr/" title="Submitting a PR" class="md-nav__link">
+    <a href="../guides/submitting-pr/" title="Submitting a PR" class="md-nav__link">
       Submitting a PR
     </a>
   </li>
@@ -422,7 +454,7 @@
 
 
   <li class="md-nav__item">
-    <a href="migrate-from-v1/" title="Migrate v1 to v2" class="md-nav__link">
+    <a href="../guides/migrate-from-v1/" title="Migrate v1 to v2" class="md-nav__link">
       Migrate v1 to v2
     </a>
   </li>
@@ -1254,6 +1286,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#beta-control-documentation" title="Beta control documentation" class="md-nav__link">
+    Beta control documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" title="Next Steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1264,18 +1319,19 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/pnp/sp-dev-fx-controls-react/blob/master/docs/documentation/docs/guides/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/pnp/sp-dev-fx-controls-react/blob/master/docs/documentation/docs/beta.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="project-guides">Project guides<a class="headerlink" href="#project-guides" title="Permanent link">&para;</a></h1>
-<p>Following is an overview of guides for this project. If you're considering contributing to the project, reading up on these guides will help you understand the project structure and get started developing for it.</p>
-<ul>
-<li><a href="contributing/">Contributing</a> - how you can contribute to the project</li>
-<li><a href="mpa/">Minimal Path to Awesome</a> - setup your development environment</li>
-<li><a href="submitting-pr/">Submitting a PR</a> - how to submit a PR</li>
-<li><a href="migrate-from-v1/">Migrating from V1</a> - how to migrate from v1</li>
-</ul>
-<p><img alt="" src="https://telemetry.sharepointpnp.com/sp-dev-fx-controls-react/wiki/controls/guides" /></p>
+                <h1 id="testing-out-a-beta-release">Testing out a beta release <img alt="" src="https://img.shields.io/npm/v/@pnp/spfx-controls-react/next.svg" /><a class="headerlink" href="#testing-out-a-beta-release" title="Permanent link">&para;</a></h1>
+<p>All you need to do for testing out a beta release of <code>@pnp/spfx-controls-react</code> is to install the dependency as follows:</p>
+<div class="codehilite"><pre><span></span><code>npm install @pnp/spfx-controls-react@next --save
+</code></pre></div>
+
+<h2 id="beta-control-documentation">Beta control documentation<a class="headerlink" href="#beta-control-documentation" title="Permanent link">&para;</a></h2>
+<p>The control documentation is only live for public releases, not for beta versions. If you want to checkout the markdown files of all controls in the <code>dev</code> branch: <a href="https://github.com/pnp/sp-dev-fx-controls-react/tree/dev/docs/documentation/docs/controls">beta documentation</a>.</p>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Once you installed the beta version, you can start using the controls in your solution. Go to the homepage to get an overview of all the available controls and the steps to get started: <a href="./">home</a>.</p>
+<p><img alt="" src="https://telemetry.sharepointpnp.com/sp-dev-fx-controls-react/wiki/beta" /></p>
                 
                   
                 
@@ -1296,7 +1352,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../beta/" title="Beta testing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1305,19 +1361,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Beta testing
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="contributing/" title="Contributing" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../guides/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Contributing
+                Overview
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
